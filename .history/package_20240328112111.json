@@ -1,0 +1,15 @@
+{
+  "name": "resiquest-brgy409",
+  "version": "1.0.0",
+  "description": "Software Engineering Document Request Management System (DRMS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+   "dev": "tailwindcss -i ./Frontend/input.css -o ./Frontend/output.css --watch" 
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

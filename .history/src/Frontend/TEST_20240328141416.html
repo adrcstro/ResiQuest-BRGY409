@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../Images/brgylogo.png">
+    <title>BRGY-409</title>
+    <link href="output.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+
+</head>
+<body>
+ 
+    <style>
+        .modal {
+          transition: opacity 0.3s, transform 0.3s;
+          opacity: 0;
+          transform: scale(0.5);
+        }
+      
+        .modal.open {
+          opacity: 1;
+          transform: scale(1);
+        }
+      </style>
+      
+      <div>
+        <button id="open-modal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Open Modal
+        </button>
+      </div>
+      
+      <div id="modal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+        <div class="bg-white p-8 max-w-md mx-auto rounded-lg shadow-lg modal">
+          <div class="text-center">
+            <h2 class="text-xl font-semibold text-gray-800">Modal Title</h2>
+            <p class="text-gray-600 mt-2">Modal content goes here.</p>
+          </div>
+          <div class="mt-4 flex justify-center">
+            <button id="close-modal" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        const openModalButton = document.getElementById('open-modal');
+        const closeModalButton = document.getElementById('close-modal');
+        const modal = document.getElementById('modal');
+      
+        openModalButton.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+          setTimeout(() => {
+            modal.querySelector('.modal').classList.add('open');
+          }, 50); // Delay to allow the modal to be visible before the animation starts
+        });
+      
+        closeModalButton.addEventListener('click', () => {
+          modal.querySelector('.modal').classList.remove('open');
+          setTimeout(() => {
+            modal.classList.add('hidden');
+          }, 300); // Duration of the transition animation
+        });
+      
+        modal.addEventListener('click', (event) => {
+          if (event.target === modal) {
+            modal.querySelector('.modal').classList.remove('open');
+            setTimeout(() => {
+              modal.classList.add('hidden');
+            }, 300); // Duration of the transition animation
+          }
+        });
+      </script>
+      
+
+
+
+
+
+
+        <script src="dashboard.js"></script>
+</body>
+</html>

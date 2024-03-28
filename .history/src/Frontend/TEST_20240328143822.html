@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../Images/brgylogo.png">
+    <title>BRGY-409</title>
+    <link href="output.css" rel="stylesheet" >
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+</head>
+<body>
+<!-- Button to open the modal -->
+<button id="openModalButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-12 ">Open Modal</button>
+
+<!-- Modal HTML -->
+<div id="myModal" class="hidden fixed inset-0 z-10 w-screen overflow-y-auto">
+ 
+</div>
+
+<script>
+  // Get the modal element
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("openModalButton");
+
+  // Get the Cancel button
+  var cancelBtn = document.getElementById("cancelButton");
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.classList.remove("hidden");
+    setTimeout(function() {
+      modal.querySelector(".relative").style.opacity = "1";
+    }, 10); // Delay to ensure opacity change is animated
+  }
+
+  // When the user clicks the Cancel button, close the modal
+  cancelBtn.onclick = function() {
+    modal.querySelector(".relative").style.opacity = "0";
+    setTimeout(function() {
+      modal.classList.add("hidden");
+    }, 300); // Use the same duration as the transition in CSS
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.querySelector(".relative").style.opacity = "0";
+      setTimeout(function() {
+        modal.classList.add("hidden");
+      }, 300); // Use the same duration as the transition in CSS
+    }
+  }
+</script>
+
+
+
+
+
+
+
+        <script src="dashboard.js"></script>
+</body>
+</html>
