@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="output.css" rel="stylesheet" >
+</head>
+<style>
+    .tree-node {
+        position: relative;
+    }
+
+    .tree-node::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -8px;
+        border-left: 1px solid #000;
+        height: 100%;
+    }
+
+    .tree-node::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -8px;
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
+        width: 8px;
+    }
+
+    .tree-node:last-child::before {
+        height: 50%;
+    }
+
+    .tree-node:last-child::after {
+        display: none;
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+</style>
+</head>
+
+<body class="p-4">
+<div class="max-w-md mx-auto">
+    <ul class="list-none">
+        <li class="tree-node">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50" alt="Person">
+                <span>John Doe</span>
+            </div>
+            <ul class="list-none ml-8">
+                <li class="tree-node">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Person">
+                        <span>Jane Doe</span>
+                    </div>
+                    <ul class="list-none ml-8">
+                        <li class="tree-node">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/50" alt="Person">
+                                <span>Mike Smith</span>
+                            </div>
+                        </li>
+                        <li class="tree-node">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/50" alt="Person">
+                                <span>Sarah Johnson</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tree-node">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Person">
+                        <span>Mark Williams</span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="tree-node">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50" alt="Person">
+                <span>Emily Brown</span>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

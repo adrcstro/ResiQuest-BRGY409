@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../Images/brgylogo.png">
+    <title>BRGY-409</title>
+    <link href="output.css" rel="stylesheet" >
+</head>
+<body>
+ 
+ <!-- Button to open modal -->
+<button id="openModalButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  Open Modal
+</button>
+
+<!-- Modal dialog -->
+<div id="myModal" class="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex">
+  <div class="relative p-8 bg-white w-full max-w-md m-auto flex-col flex">
+    <div class="absolute top-0 right-0">
+      <button id="closeModalButton" class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
+        Close
+      </button>
+    </div>
+    <div>
+      <!-- Modal content -->
+      <h1 class="text-xl font-bold mb-4">Modal Title</h1>
+      <p class="mb-4">Modal content goes here...</p>
+      <button id="closeModalButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Confirm
+      </button>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+        <script src="dashboard.js"></script>
+</body>
+</html>

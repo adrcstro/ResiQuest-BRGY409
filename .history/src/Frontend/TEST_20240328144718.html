@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../Images/brgylogo.png">
+    <title>BRGY-409</title>
+    <link href="output.css" rel="stylesheet" >
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+</head>
+<body>
+<!-- Button to open the modal -->
+
+
+<div class="flex justify-between w-full py-4">
+    <div class="mr-19">
+      <input type="checkbox" name="ch" id="ch" class="mr-2" />
+      <span class="text-md">I agree with the</span>
+      <a onclick="document.getElementById('privacyPolicyModal').classList.remove('hidden')"class="text-md text-blue-600  tracking-tighter cursor-pointer">Terms and Conditions</a>
+    </div>
+   
+  </div>
+
+
+<div id="privacyPolicyModal" class="hidden">  
+    <div class="fixed z-10 inset-0 overflow-y-auto  flex items-center justify-center">
+      <div class="absolute inset-0 bg-black opacity-75"></div>
+      <div class="relative bg-blue-600 rounded-lg overflow-hidden shadow-xl max-w-screen-lg w-full m-4" x-transition:enter="transition ease-out duration-300 transform opacity-0 scale-95" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200 transform opacity-100 scale-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" x-cloak>
+     
+     
+       
+
+
+
+        
+      </div>
+    </div>
+</div>
+
+
+
+        <script src="dashboard.js"></script>
+</body>
+</html>
