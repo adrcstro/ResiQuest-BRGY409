@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="x-icon" href="/Images/brgylogo.png">
+        <title>BRGY-409</title>
+        <link href="output.css" rel="stylesheet" >
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    
+    </head>
+<body>
+    
+<!-- Open the modal using ID.showModal() method -->
+<!-- You can open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_3.showModal()">open modal</button>
+
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <h3 class="font-bold text-lg">Enter Account Password</h3>
+  
+    <div>
+       
+        <div class="mt-2.5">
+            <input  required="" type="password" name="last-name" id="last-name" autocomplete="family-name"
+                placeholder="Password"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+        </div>
+    </div>
+
+
+
+    
+  </div>
+</dialog>
+
+
+<script src="dashboard.js"></script>
+</body>
+</html>

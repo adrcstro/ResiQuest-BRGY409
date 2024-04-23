@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using SweetAlert2 with CDN</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
+</head>
+<body>
+
+<!-- Button to trigger SweetAlert2 alert -->
+<button id="triggerAlert">Click me for an alert</button>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js"></script>
+<script>
+    // Add event listener to the button
+    document.getElementById('triggerAlert').addEventListener('click', function() {
+        // Show SweetAlert2 alert
+        Swal.fire('Hello world!');
+    });
+</script>
+</body>
+</html>

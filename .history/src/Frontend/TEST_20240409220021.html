@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetAlert2 Button Example</title>
+  <!-- Assuming you have already included Tailwind CSS in your project -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 p-4">
+  <button id="alertButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Click me for an alert!
+  </button>
+
+  <!-- Import SweetAlert2 from npm -->
+  <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+
+  <script>
+    // Assuming you have already imported Swal from 'sweetalert2'
+    document.getElementById('alertButton').addEventListener('click', function() {
+      // Trigger SweetAlert2 alert
+      Swal.fire({
+        title: 'Hello world!',
+        text: 'This is a SweetAlert2 alert!',
+        icon: 'success',
+        confirmButtonText: 'Okay'
+      });
+    });
+  </script>
+
+  <script src="../javascript/dashboard.js"></script>
+</body>
+</html>
