@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-container {
+  @apply grid w-full text-white bg-primary border-b border-t border-b-blue-950 border-t-gray-500 shadow-xl rounded-2xl bg-opacity-60 p-3 space-y-4 hover:scale-105 transition-transform;
+}
+
+.card-services {
+  @apply grid w-full text-white bg-white border-b shadow-xl rounded-lg p-3 space-y-4 hover:scale-105 transition-transform;
+}
+
+.dropdown {
+  @apply hover:bg-gray-200 md:hover:bg-transparent px-2 rounded hover:text-blue-700 block relative w-fit;
+}
