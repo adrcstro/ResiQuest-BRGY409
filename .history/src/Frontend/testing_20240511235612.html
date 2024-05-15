@@ -1,0 +1,174 @@
+<?php
+require '../php/config.php';
+
+if (!empty($_SESSION["ID"])) {
+    header("Location: dashboard.php");
+}
+
+function generateRandomID($length = 8) {
+    $characters = '0123456789';
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
+    return $randomString;
+}
+
+if (isset($_POST["submit"])) {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $date = $_POST["date"];
+    $password = $_POST["password"];
+    $ConfirmPass = $_POST["Confirm Password"];
+
+    // Password strength requirements
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+
+    if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+        echo "<script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    Swal.fire({
+                        title: 'Password must Contains the Following',
+                        html: '<ul style=\"text-align: left; list-style: disc; padding-left: 20px;\"><li>at least 1 uppercase letter [Ex. A-Z]</li><li>1 lowercase letter [Ex. a-z]</li><li>1 numerical character [Ex. 1-0]</li><li>1 special character [Ex. ^*!_]</li><li>Be at least 8 characters long</li></ul>',
+                        icon: 'error'
+                    });
+                });
+             </script>";
+    } else {
+        // Check if the email is a valid email address
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "<script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        Swal.fire(
+                            'Error',
+                            'This is not a valid email address<br>Ex. JuanCruz@gmail.com',
+                            'error'
+                        );
+                    });
+                 </script>";
+        } else {
+            $duplicate = mysqli_query($con, "SELECT * FROM admin_tbl WHERE email = '$email'");
+            if (mysqli_num_rows($duplicate)) {
+                echo "<script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire(
+                                'Error',
+                                'This email is already taken',
+                                'error'
+                            );
+                        });
+                     </script>";
+            } else {
+                if ($password == $ConfirmPass) {
+                    $uniqueID = generateRandomID();
+                    // Hash the password
+                    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+                    
+                    // Specify the columns in the INSERT query
+                    $query = "INSERT INTO users (ID, name, email, date, password,) 
+                              VALUES ('$uniqueID', '$name', '$email', '$date', '$pass', '$Confirmpass', '$hashedPassword', 'NotVerified')";
+
+                    
+                    mysqli_query($con, $query);
+                    echo "<script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                Swal.fire(
+                                    'Success',
+                                    'Registration successful',
+                                    'success'
+                                );
+                            });
+                         </script>";
+                } else {
+                    echo "<script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                Swal.fire(
+                                    'Error',
+                                    'Password doesn\'t match',
+                                    'error'
+                                );
+                            });
+                         </script>";
+                }
+            }
+       
+}
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/assets/image/sfdef.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giving Grace: Donation Tracker System </title>
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title" style="margin-bottom: 5px;">Sign up</h2>
+                        <h6 style="white-space: nowrap; font-size: 14px; margin-top: 0;"><span style="display: inline-block; font-size: inherit; font-weight: normal;">Already have an Account?</span> <a href="login.php" class="signup-image-link" style="display: inline-block; font-size: inherit;">Login</a></h6>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="date"><i class="zmdi zmdi-calendar"></i></label>
+                                <input type="date" name="date" id="date" placeholder="Date" />
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password" />
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="confirmpass" id="confirmpass" placeholder="Confirm Password" />
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup.svg" alt="sing up image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
