@@ -1,0 +1,103 @@
+<?php
+require 'Connection.php';
+ 
+// Get the news ID from the request
+$newsId = $_GET['request_id'];
+
+// Prepare and execute the SQL query to fetch news details
+$query = "SELECT * FROM newsandevents WHERE NewsID = '$newsId'";
+$result = mysqli_query($conn, $query);
+
+// Check if there is a row returned
+if (mysqli_num_rows($result) > 0) {
+    // Fetch the news details
+    $row = mysqli_fetch_assoc($result);
+
+    // Display the picture centered
+    echo '<div class="flex justify-center mb-4 flex-col">';
+    echo '<img src="../Backend/uploads/' . $row["NewsImages"] . '" alt="News Image" class="w-80 h-80 object-contain border-2 border-gray-400 rounded-md p-2">';
+        // Display the news details
+        echo '<div class="text-center">';
+        echo '<h2 class="text-2xl font-bold mb-2">' . $row["NewsTittle"] . '</h2>';
+        echo '<p class="text-gray-500 mb-2"><span class="font-semibold">Date:</span> ' . $row["NewsDate"] . '</p>';
+        echo '<p class="text-gray-500 mb-2"><span class="font-semibold">Time:</span> ' . $row["Newstime"] . '</p>';
+        echo '<p class="text-gray-500 mb-4"><span class="font-semibold">Content:</span> ' . $row["NewsContent"] . '</p>';
+        echo '</div>';
+    echo '</div>';
+
+
+echo' <div class="mt-4 px-4 py-3 sm:px-6 md:px-8 lg:px-10 flex flex-col md:flex-row gap-4">
+<!-- Left side inputs -->
+<div class="flex-1 flex flex-col">
+    <div class="flex flex-col items-center justify-center w-full h-full">
+        <div class="text-lg font-bold text-center">
+            <h2>News Thumbnails</h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">SVG, PNG, JPG, or GIF (MAX. 800x400px)</p>
+        </div>
+        <label for="NewsImage" class="flex flex-col items-center justify-center w-full h-full p-2 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+        <?php if (isset($row["NewsImages"]) && !empty($row["NewsImages"])): ?>
+            <img src="../Backend/uploads/<?php echo $row["NewsImages"]; ?>" alt="News Image" style="width: 100%; height: auto; object-fit: cover;">
+          <?php endif; ?>
+            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                </svg>
+                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            </div>
+            <input type="file" name="NewsImage" id="NewsImage" accept=".jpg, .png, .jpeg, .pdf, .doc, .docx" class="hidden" onchange="displayImage(this, 'front')" />
+        </label>
+    </div>
+</div>
+<!-- Right side input -->
+<div class="flex-1 flex flex-col">
+    <span class="block text-sm font-semibold leading-6 text-gray-900">News Title</span>
+    <input type="text" name="NewsTitle" placeholder="Enter News Title" class="input input-bordered focus:outline-none focus:ring-1 focus:border-blue-500 input-white w-full bg-white text-slate-900" required />
+
+    <div class="mt-3 flex flex-col sm:flex-row gap-x-6">
+        <div class="sm:flex-1">
+            <label for="NewsDate" class="block text-sm font-semibold leading-6 text-gray-900">News Date</label>
+            <div>
+                <input required type="date" name="NewsDate" id="NewsDate" autocomplete="Address" placeholder="Enter Address" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 flex-1">
+            </div>
+        </div>
+        <div class="sm:flex-1">
+            <label for="NewsTime" class="block text-sm font-semibold leading-6 text-gray-900">News Time</label>
+            <div>
+                <input required type="time" name="NewsTime" id="NewsTime" autocomplete="Zip-Code" placeholder="Enter City Zip Code Ex. 1008" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 flex-1">
+            </div>
+        </div>
+    </div>
+    <span class="block text-sm font-semibold leading-6 text-gray-900 mt-3">News Content</span>
+    <textarea name="NewsContent" rows="6" class="rounded-lg border-gray-200 w-full h-64 pt-2 text-gray-900 border-1 bg-white input input-bordered focus:outline-none focus:ring-1 focus:border-blue-500 resize-none" placeholder="Enter News Content....." required></textarea>
+</div>
+</div>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+} else {
+    // Return an error message if no news found
+    echo json_encode(["error" => "No news found"]);
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
