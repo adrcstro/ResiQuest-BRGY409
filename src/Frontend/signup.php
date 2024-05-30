@@ -351,7 +351,7 @@ if (isset($_POST["submit"])) {
                         
                         <p class="mt-4 text-xs text-gray-600 text-center">
                             Already have an account?
-                            <a href="#" class="border-b border-gray-500 border-dotted text-blue-600" onclick="showsignup()" >
+                            <a href="Login.php" class="border-b border-gray-500 border-dotted text-blue-600" onclick="showsignup()" >
                                 Login
                             </a>
                            

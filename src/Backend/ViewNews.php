@@ -39,13 +39,13 @@ if (mysqli_num_rows($result) > 0) {
             <div class="sm:flex-1">
                 <label for="NewsDate" class="block text-sm font-semibold leading-6 text-gray-900">News Date</label>
                 <div>
-                    <input value="' . $row["NewsDate"] . '" required type="date" name="NewsDate" id="NewsDate" autocomplete="Address" placeholder="Enter Address" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 flex-1 readonly">
+                    <input value="' . $row["NewsDate"] . '" required type="date" name="NewsDate" id="NewsDate" autocomplete="Address" placeholder="Enter Address" disabled class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 flex-1 readonly">
                 </div>
             </div>
             <div class="sm:flex-1">
                 <label for="NewsTime" class="block text-sm font-semibold leading-6 text-gray-900">News Time</label>
                 <div>
-                    <input value="' . $row["Newstime"] . '" required type="time" name="NewsTime" id="NewsTime" autocomplete="Zip-Code" placeholder="Enter City Zip Code Ex. 1008" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 flex-1 readonly">
+                    <input value="' . $row["Newstime"] . '" required type="time" name="NewsTime" id="NewsTime" autocomplete="Zip-Code" placeholder="Enter City Zip Code Ex. 1008" disabled class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 flex-1 readonly">
                 </div>
             </div>
         </div>

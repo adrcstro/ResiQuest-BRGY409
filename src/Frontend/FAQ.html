@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <script src="https://kit.fontawesome.com/817c4fe6aa.js" crossorigin="anonymous"></script>
+  <title>Barangay 409 | FAQ</title>
+  <link rel="icon" href="/Images/logo.png">
+</head>
+<body>
+  <nav id="navbar" class="fixed top-0 bg-primary border-gray-200 z-10 w-full">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a id="color" href="landing_page.html" class="flex items-center space-x-3">
+        <img src="/Images/logo.png" class="h-12" alt="Logo" />
+        <div class="flex flex-col justify-start">
+          <span class="self-center text-2xl whitespace-nowrap text-white font-bold ">BARANGAY-409</span>
+          <span class="text-sm font-semibold whitespace-nowrap text-white">Local Government System</span>
+        </div>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center w-10 h-10 justify-center text-sm  rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-slate-600 text-slate-600 " aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex md:items-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
+          <li>
+            <a href="landing_page.html" class="block py-2 px-3 rounded md:bg-transparent md:border-0 text-white md:p-0 cursor-default hover:text-blue-950" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="services.html" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-blue-950 md:p-0">Services</a>
+          </li>
+          <li>
+            <div class="py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0" name="more" id="more">
+              <button class="hover:text-blue-950 rounded w-full flex items-center justify-start gap-2" type="button" onclick="openMore()">
+                More
+                <i class="fa-solid fa-caret-down"></i>
+              </button>
+              <div class="relative md:absolute md:top-0 hidden bg-transparent md:bg-white rounded px-2 py-2 space-y-4 md:space-y-2 pt-3 md:pt-0 md:mt-16 z-20 text-slate-800 shadow-xl" id="navMoreItems">
+                <a href="news.php" class="dropdown">News & Updates</a>
+                <a href="contact_us.php" class="dropdown">Contact Us</a>
+                <a href="about_us.html" class="dropdown">About Us</a>
+                <a href="FAQ.html" class="dropdown">FAQs</a>
+              </div>
+            </div>
+          </li>
+          <div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-2 mt-2 md:mt-0">
+            <button class="text-primary bg-white hover:bg-btnDark hover:text-white bg-opacity-90 hover: focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2">
+              Login
+            </button>
+            <button class="text-white hover:text-white border border-white hover:bg-btnDark hover:border-btnDark focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center">
+              Sign up
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="pt-10 lg:mt-32 bg-white z-50" id="FAQ">
+    <span class="pl-3 border-l-8 mx-10 md:mx-40 border-primary flex flex-col">
+      <h1 class= "text-black text-5xl font-semibold mb-2">
+        Barangay <b>FAQ's</b>
+      </h1>
+      <h1>
+        Frequently Asked Questions
+      </h1>
+    </span>
+    <!-- content -->
+    <div class="grid grid-cols-1 gap-6 mt-16 px-24 md:mx-20">
+    <!-- accordion 1 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-1">
+            <span>What services does the Barangay Document Request provide?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out ">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            The Barangay provides various services including issuance of barangay clearances, barangay i.d, barangay indigency, business permit, letter for barangay hearing, and many more.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 2 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-2">
+            <span>How can I report community issues or concerns?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out ">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            You can report community issues or concerns by contacting the Barangay office directly, attending Barangay assemblies, or using online platforms provided by the Barangay for feedback and inquiries.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 3 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-3">
+            <span>What are the requirements for obtaining a barangay clearance?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            The requirements for obtaining a barangay clearance may vary depending on the Barangay's regulations but commonly include valid identification documents, proof of residency, and payment of necessary fees.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 4 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-4">
+            <span>How can I participate in Barangay activities and events?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            You can participate in Barangay activities and events by attending community gatherings, volunteering for programs and projects, joining Barangay-sponsored initiatives, or contacting the Barangay officials for more information.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 5 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-5">
+            <span>How can I report a crime or emergency situation?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-5" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            To report a crime or emergency situation, you can contact the local police authorities, Barangay officials, or emergency hotlines provided by the government. It's important to provide accurate information and cooperate with authorities for prompt assistance.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 6 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-6">
+            <span>How can I get the Document I Requested?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-6" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            The document you've requeted will be placed and process in our barangay hall, so you can pick it up there when it's indicate that it is ready to be pick-up.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function openMore() {
+    var navMoreItems = document.getElementById("navMoreItems");
+    if (navMoreItems.classList.contains("hidden")) {
+      navMoreItems.classList.remove("hidden");
+    } else {
+      navMoreItems.classList.add("hidden");
+    }
+  }
+  // JavaScript to toggle the visibility of the menu
+  document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const menu = document.getElementById('navbar-default');
+
+    button.addEventListener('click', function () {
+      menu.classList.toggle('hidden');
+    });
+
+  });
+
+</script>
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+</body>
+</html>

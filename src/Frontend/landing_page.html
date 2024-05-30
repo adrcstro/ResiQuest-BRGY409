@@ -80,10 +80,10 @@
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex md:items-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
               <li>
-                <a href="#" class="block py-2 px-3 rounded md:bg-transparent md:border-0 text-slate-600 md:p-0 cursor-default hover:text-primary" aria-current="page">Home</a>
+                <a href="landing_page.html" class="block py-2 px-3 rounded md:bg-transparent md:border-0 text-slate-600 md:p-0 cursor-default hover:text-primary" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#services" class="block py-2 px-3 text-slate-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-primary md:p-0">Services</a>
+                <a href="services.html" class="block py-2 px-3 text-slate-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-primary md:p-0">Services</a>
               </li>
               <li>
                 <div class="py-2 px-3 text-slate-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0" name="more" id="more">
@@ -91,20 +91,22 @@
                     More
                     <i class="fa-solid fa-caret-down"></i>
                   </button>
-                  <div class="relative md:absolute md:top-0 hidden bg-transparent md:bg-white rounded px-2 py-2 space-y-4 md:space-y-2 pt-3 md:pt-0 md:mt-16 z-20 " id="navMoreItems">
-                    <a href="#news" class="dropdown">News & Updates</a>
-                    <a href="#contact" class="dropdown">Contact Us</a>
-                    <a href="#about" class="dropdown">About Us</a>
-                    <a href="#FAQ" class="dropdown">FAQs</a>
+                  <div class="relative md:absolute md:top-0 hidden bg-transparent md:bg-white rounded px-2 py-2 space-y-4 md:space-y-2 pt-3 md:pt-0 md:mt-16 z-20 shadow-xl" id="navMoreItems">
+                    <a href="news.php" class="dropdown">News & Updates</a>
+                    <a href="contact_us.php" class="dropdown">Contact Us</a>
+                    <a href="about_us.html" class="dropdown">About Us</a>
+                    <a href="FAQ.html" class="dropdown">FAQs</a>
                   </div>
                 </div>
               </li>
               <div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-2 mt-2 md:mt-0">
-                <button class="text-white bg-blue-700 bg-opacity-90 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2">
+                <button class="text-white bg-blue-700 bg-opacity-90 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2"><a href="Login.php">
                   Login
+                </a>
                 </button>
-                <button class="text-primary hover:text-white border border-blue-700 hover:bg-blue-800 hover:border-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center">
+                <button class="text-primary hover:text-white border border-blue-700 hover:bg-blue-800 hover:border-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center"><a href="signup.php">
                   Sign up
+                </a>
                 </button>
               </div>
             </ul>
@@ -148,309 +150,112 @@
           </div>
         </div>
         <!-- card row -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 lg:flex items-start text-center py-auto mt-40 md:mx-20 gap-4 rounded-lg">
-          <!-- card container -->
-          <div class="card-container">
+          <div class="grid grid-cols-1 lg:grid-cols-3 lg:flex items-start text-center py-auto mt-40 md:mx-20 gap-4 rounded-lg">
+            <!-- card container -->
+            <div class="card-container">
+              <div class="flex justify-center min-h-32 min-w-32">
+                <img class="h-40 w-40" src="/Images/News.svg" alt="vector1" />
+              </div>
+              <div class="flex items-start justify-between space-x-3">
+                <div class="w-full tex-center space-y-3">
+                  <h5 class="text-2xl font-semibold">News & Announcements</h5>
+                  <p class="font-extralight">Stay updated with the latest news and announcements from our community.</p>
+                </div>
+              </div>
+              <div class="flex justify-center items-end py-4">
+                <button class="rounded-full border-2 bg-transparent border-white p-2 pr-5 pl-5 hover:bg-white hover:text-primary transform text-white btn" onclick="my_modal_1.showModal()" >View Details</button>
+              </div>
+            </div>
+            <!-- card container -->
+            <div class="card-container">
+              <div class="flex justify-center min-h-32 min-w-32">
+                <img class="h-40 w-40" src="/Images/Documents.svg" alt="vector1" />
+              </div>
+              <div class="flex items-start justify-between space-x-3">
+                <div class="w-full tex-center space-y-3">
+                  <h5 class="text-2xl font-semibold">Document Issuance</h5>
+                  <p class="font-extralight">Get your documents processed efficiently with our document issuance services.</p>
+                </div>
+              </div>
+              <div class="flex justify-center items-end py-4">
+                <button class="rounded-full border-2 bg-transparent border-white p-2 pr-5 pl-5 hover:bg-white hover:text-primary transform btn text-white" onclick="my_modal_2.showModal()" >View Details</button>
+              </div>
+            </div>
+            <!-- card container -->
+            <div class="card-container ">
+              <div class="flex justify-center min-h-32 min-w-32">
+                <img class="h-40 w-40" src="/Images/New team members.svg" alt="vector1" />
+              </div>
+              <div class="flex items-start justify-between space-x-3">
+                <div class="w-full tex-center space-y-3">
+                  <h5 class="text-2xl font-semibold">Barangay Officials</h5>
+                  <p class="font-extralight">Meet our new barangay officials and learn about their roles in our barangay.</p>
+                </div>
+              </div>
+              <div class="flex justify-center items-end py-4">
+                <button class="rounded-full border-2 bg-transparent border-white p-2 pr-5 pl-5 hover:bg-white hover:text-primary transform btn text-white" onclick="my_modal_3.showModal()" >View Details</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+        <!-- modal 1 -->
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <div class="modal-content">
             <div class="flex justify-center min-h-32 min-w-32">
               <img class="h-40 w-40" src="/Images/News.svg" alt="vector1" />
             </div>
-            <div class="flex items-start justify-between space-x-3">
-              <div class="w-full tex-center space-y-3">
-                <h5 class="text-2xl font-semibold">News & Announcements</h5>
-                <p class="font-extralight">Stay updated with the latest news and announcements from our community.</p>
-              </div>
-            </div>
-            <div class="flex justify-center items-end py-4">
-              <button class="rounded-full border-2 bg-transparent border-white p-2 pr-5 pl-5 hover:bg-white hover:text-primary transform">View Details</button>
-            </div>
+            <h3 class="font-bold text-lg">News & Announcements</h3>
+            <p class="pt-3">Stay updated with the latest news and announcements from our community.</p><br>
+            <p>Our news section includes information about upcoming events, community initiatives, and important announcements. We strive to keep our residents informed about everything happening in our neighborhood.</p>
           </div>
-          <!-- card container -->
-          <div class="card-container">
+          <div class="modal-action">
+            <button class="btn bg-primary text-white hover:bg-btnDark" onclick="closeModal('my_modal_1')">Close</button>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- modal 2 -->
+      <dialog id="my_modal_2" class="modal">
+        <div class="modal-box">
+          <div class="modal-content">
             <div class="flex justify-center min-h-32 min-w-32">
               <img class="h-40 w-40" src="/Images/Documents.svg" alt="vector1" />
             </div>
-            <div class="flex items-start justify-between space-x-3">
-              <div class="w-full tex-center space-y-3">
-                <h5 class="text-2xl font-semibold">Document Issuance</h5>
-                <p class="font-extralight">Get your documents processed efficiently with our document issuance services.</p>
-              </div>
-            </div>
-            <div class="flex justify-center items-end py-4">
-              <button class="rounded-full border-2 bg-transparent border-white p-2 pr-5 pl-5 hover:bg-white hover:text-primary transform">View Details</button>
-            </div>
+            <h3 class="font-bold text-lg">Document Issuance</h3>
+            <p class="pt-3">Get your documents processed efficiently with our document issuance services.</p><br>
+            <p>Our document issuance services cover a wide range of documents, including permits, licenses, certificates, and more. Our dedicated team ensures that your documents are processed accurately and promptly, saving you time and hassle.</p>
           </div>
-          <!-- card container -->
-          <div class="card-container ">
+          <div class="modal-action">
+            <form method="dialog">
+            <button class="btn bg-primary text-white hover:bg-btnDark" onclick="closeModal('my_modal_2')">Close</button>
+          </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- modal 3 -->
+      <dialog id="my_modal_3" class="modal">
+        <div class="modal-box"> 
+          <div class="modal-content">
             <div class="flex justify-center min-h-32 min-w-32">
               <img class="h-40 w-40" src="/Images/New team members.svg" alt="vector1" />
             </div>
-            <div class="flex items-start justify-between space-x-3">
-              <div class="w-full tex-center space-y-3">
-                <h5 class="text-2xl font-semibold">Barangay Officials</h5>
-                <p class="font-extralight">Meet our new barangay officials and learn about their roles in our barangay.</p>
-              </div>
-            </div>
-            <div class="flex justify-center items-end py-4">
-              <button class="rounded-full border-2 bg-transparent border-white p-2 pr-5 pl-5 hover:bg-white hover:text-primary transform">View Details</button>
-            </div>
+            <h3 class="font-bold text-lg">Barangay Officials</h3>
+            <p class="pt-3">Meet our new barangay officials and learn about their roles in our barangay.</p><br>
+            <p>We are pleased to introduce our newly elected barangay officials who are dedicated to serving our community. Learn about their backgrounds, responsibilities, and commitments to making our barangay a better place for everyone.</p>
+          </div>
+          <div class="modal-action">
+            <button class="btn bg-primary text-white hover:bg-btnDark" onclick="closeModal('my_modal_3')">Close</button>
           </div>
         </div>
-      </div>
+      </dialog>
       <!-- news and updates -->
-      <section class="mt-32 lg:mt-48 z-50" id="news">
-        <span class="pl-3 border-l-8 mx-10 md:mx-40 border-primary flex flex-col mb-2">
-          <h1 class="text-black text-5xl font-semibold mb-2">
-            Barangay <b>Announcements</b>
-          </h1>
-          <p>
-            List of News & updates
-          </p>
-        </span>
-        <!-- news content -->
-        <div class="flex flex-row justify-center">
-          <div class="bg-gray-700 h-auto w-9/12 mt-12 relative rounded-md">
-            <div class="grid grid-cols-1 lg:grid-cols-2 relative">
-              <img class="h-fit p-10" src="/Images/bg1.jpg" alt="image">
-              <div class="p-10 text-white text-xl text-justify font-extralight pt-0 lg:pt-10 lg:pl-0 flex flex-col">
-                <h1>Barangay-409 is offically welcoming all the visitors to try out the newly opened Food Bazaar that is located at Lardizabal St. All the visitors can try and enjoy the finest dishes and homegrown products from Barangay 409 Food Bazaar. What are you waiting for? Come and join us at Lardizabal St. food bazaar and experience the mouthwatering foods like no other. </h1>
-                <h1 class="pt-5 text-white font-bold">Read more</h1>
-                <div class="text-white bg-transparent border-2 border-white rounded-full p-4 w-64 flex justify-center gap-2 ml-auto ">
-                  <button class="text-xl font-bold text-white">Read more news</button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 place-content-center text-white">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  </svg>
-                </div>
-              </div>
-              
-              <div class="rounded-lg bg-primary p-3 absolute top-0 right-10 -translate-y-1/2">
-                <span class="text-white text-3xl">News & Updates</span>
-              </div>
-            </div>
-             <!-- Ticker section -->
-            <div class="container mx-auto my-8 py-4">
-              <div class="flex justify-between items-center bg-gray-600 rounded-lg">
-                <h5 class="text-white text-2xl font-bold flex items-center bg-red-700 p-4 w-64">Breaking News</h5>
-                <marquee class="w-full">
-                  <p class="text-white">Head on to Lardizabal St. and try the finest dishes and homegrown products from Barangay 409 Food Bazaar  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Wrapping the festivities with some Rhythm and Horns from Sevenbeat Drumbeaters. Happy Fiesta Sampaloc! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     Let's embrace our differences, celebrate our diversity, and harness the power of collaboration. With trust as our guide and cooperation as our compass, there's no limit to what we can accomplish. </p>
-                </marquee>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </section>
-
-         
-
         <!-- barangay services -->
-        <section class="bg-white mt-32 pt-10 lg:mt-32z-50" id="services">
-          <span class="pl-3 border-l-8  mx-10 md:mx-40 border-primary flex flex-col relative">
-            <h1 class= "text-black text-5xl font-semibold mb-2">
-              Barangay <b>Services</b>
-            </h1>
-            <h1>
-              List of Barangay Services
-            </h1>
-          </span>
-          <!-- card columns -->
-          <div class="grid grid-cols-1 lg:grid-cols-3 p-24 py-auto md:mx-20 gap-4 rounded-lg">
-            <!-- card container -->
-            <div class="card-services">
-              <div class="flex justify-center min-h-32 min-w-32">
-                <img class="h-32 w-32" src="/Images/documents-icon.svg" alt="vector1" />
-              </div>
-              <div class="flex items-start justify-between space-x-3">
-                <div class="w-full tex-center space-y-3">
-                  <h5 class="text-xl font-semibold text-gray-800">Request <b>Documents</b></h5>
-                  <p class="font-extralight text-gray-800">Request important documents such as certificates, permits, and clearances hassle-free through our online platform.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card container -->
-            <div class="card-services">
-              <div class="flex justify-center min-h-32 min-w-32">
-                <img class="h-32 w-32" src="/Images/email-icon.svg" alt="vector1" />
-              </div>
-              <div class="flex items-start justify-between space-x-3">
-                <div class="w-full tex-center space-y-3">
-                  <h5 class="text-xl font-semibold text-gray-800">Schedule Releasing <b>Documents</b></h5>
-                  <p class="font-extralight text-gray-800">Book your appointment to collect your requested documents conveniently and avoid long waiting times.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card container -->
-            <div class="card-services">
-              <div class="flex justify-center min-h-32 min-w-32">
-                <img class="h-32 w-32" src="/Images/chat-icon.svg" alt="vector1" />
-              </div>
-              <div class="flex items-start justify-between space-x-3">
-                <div class="w-full tex-center space-y-3">
-                  <h5 class="text-xl font-semibold text-gray-800">Manage Residents <b>Information</b></h5>
-                  <p class="font-extralight text-gray-800">Efficiently manage residents' information, including updates, registrations, and verifications for better community services.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card container -->
-            <div class="card-services">
-              <div class="flex justify-center min-h-32 min-w-32">
-                <img class="h-32 w-32" src="/Images/document-print-icon.svg" alt="vector1" />
-              </div>
-              <div class="flex items-start justify-between space-x-3">
-                <div class="w-full tex-center space-y-3">
-                  <h5 class="text-xl font-semibold text-gray-800">Print <b>Documents</b></h5>
-                  <p class="font-extralight text-gray-800">Print your official documents quickly and conveniently at our barangay office for all your administrative needs.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card container -->
-            <div class="card-services">
-              <div class="flex justify-center min-h-32 min-w-32">
-                <img class="h-32 w-32" src="/Images/find-icon.svg" alt="vector1" />
-              </div>
-              <div class="flex items-start justify-between space-x-3">
-                <div class="w-full tex-center space-y-3">
-                  <h5 class="text-xl font-semibold text-gray-800">News & <b>Announcements</b></h5>
-                  <p class="font-extralight text-gray-800">Stay informed about the latest news, announcements, and events happening in Barangay-409 to keep yourself updated and engaged with the community.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card container -->
-            <div class="card-services">
-              <div class="flex justify-center min-h-32 min-w-32">
-                <img class="h-32 w-32" src="/Images/achievement-icon.svg" alt="vector1" />
-              </div>
-              <div class="flex items-start justify-between space-x-3">
-                <div class="w-full tex-center space-y-3">
-                  <h5 class="text-xl font-semibold text-gray-800">Pickup <b>Documents</b></h5>
-                  <p class="font-extralight text-gray-800">Effortlessly collect your printed documents from our designated barangay hall without any hassle or delays.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <!-- baragay FAQ -->
-        <section class="mt-32 lg:mt-32 bg-white z-50" id="FAQ">
-          <span class="pl-3 border-l-8 mx-10 md:mx-40 border-primary flex flex-col">
-            <h1 class= "text-black text-5xl font-semibold mb-2">
-              Barangay <b>FAQ's</b>
-            </h1>
-            <h1>
-              Frequently Asked Questions
-            </h1>
-          </span>
-          <!-- content -->
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 p-24 pl-32 pr-32 md:mx-20 sm:grid-cols-1">
-          <!-- accordion 1 -->
-            <div class="relative mb-3 shadow-md">
-              <h6 class="mb-0">
-                <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-1">
-                  <span>What services does the Barangay Document Request provide?</span>
-                  <i class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-                </button>
-              </h6>
-              <div data-collapse="animated-collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-                  The Barangay provides various services including issuance of barangay clearances, barangay i.d, barangay indigency, business permit, letter for barangay hearing, and many more.
-                </div>
-              </div>
-            </div>
-            <!-- accordion 2 -->
-            <div class="relative mb-3 shadow-md">
-              <h6 class="mb-0">
-                <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-2">
-                  <span>How can I report community issues or concerns?</span>
-                  <i class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-                </button>
-              </h6>
-              <div data-collapse="animated-collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-                  You can report community issues or concerns by contacting the Barangay office directly, attending Barangay assemblies, or using online platforms provided by the Barangay for feedback and inquiries.
-                </div>
-              </div>
-            </div>
-            <!-- accordion 3 -->
-            <div class="relative mb-3 shadow-md">
-              <h6 class="mb-0">
-                <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-3">
-                  <span>What are the requirements for obtaining a barangay clearance?</span>
-                  <i class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-                </button>
-              </h6>
-              <div data-collapse="animated-collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-                  The requirements for obtaining a barangay clearance may vary depending on the Barangay's regulations but commonly include valid identification documents, proof of residency, and payment of necessary fees.
-                </div>
-              </div>
-            </div>
-            <!-- accordion 4 -->
-            <div class="relative mb-3 shadow-md">
-              <h6 class="mb-0">
-                <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-4">
-                  <span>How can I participate in Barangay activities and events?</span>
-                  <i class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-                </button>
-              </h6>
-              <div data-collapse="animated-collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-                  You can participate in Barangay activities and events by attending community gatherings, volunteering for programs and projects, joining Barangay-sponsored initiatives, or contacting the Barangay officials for more information.
-                </div>
-              </div>
-            </div>
-            <!-- accordion 5 -->
-            <div class="relative mb-3 shadow-md">
-              <h6 class="mb-0">
-                <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-5">
-                  <span>How can I report a crime or emergency situation?</span>
-                  <i class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-                </button>
-              </h6>
-              <div data-collapse="animated-collapse-5" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-                  To report a crime or emergency situation, you can contact the local police authorities, Barangay officials, or emergency hotlines provided by the government. It's important to provide accurate information and cooperate with authorities for prompt assistance.
-                </div>
-              </div>
-            </div>
-            <!-- accordion 6 -->
-            <div class="relative mb-3 shadow-md">
-              <h6 class="mb-0">
-                <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-6">
-                  <span>How can I get the Document I Requested?</span>
-                  <i class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-                </button>
-              </h6>
-              <div data-collapse="animated-collapse-6" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-                  The document you've requeted will be placed and process in our barangay hall, so you can pick it up there when it's indicate that it is ready to be pick-up.
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <!-- about us -->
-        <section class="mt-32 lg:mt-32 z-50">
-          <span class="pl-3 border-l-8 mx-10 md:mx-40 border-primary flex flex-col">
-            <h1 class= "text-black text-5xl font-normal mb-2">
-              About <b>Us</b>
-            </h1>
-            <p>
-              List of News & updates
-            </p>
-          </span>
-          <!-- content -->
-          <div class="flex justify-center">
-            <div class="h-auto w-10/12 mt-12 grid grid-cols-1 lg:grid-cols-2 rounded-md shadow-lg">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.949628665719!2d120.99471412605968!3d14.601945327041818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9fb6c83552d%3A0x54ad786f735dc69e!2sBrgy.%20409%2C%20Sampaloc%2C%20Manila%2C%201008%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1712758766856!5m2!1sen!2sph" class="p-14 mx-auto my-auto" style="border:0; width: 100%; height: 450px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <div class="p-10 text-black text-lg text-justify font-extralight pt-0 lg:pt-10 lg:pl-0 space-y-4">
-                <h1 class="font-bold text-4xl text-center lg:text-start">About Barangay 409</h1>
-                <p>Barangay-409 Is situated at the 4th District of Manila, Sampaloc. Headed by Chairman Brenda S. Puertollano and known as the lone barangay that has Purok sectoring named after flowers and the original host for events like Supergames, Santacruzan Grande.<br><br>Our Barangay actively participates in various programs and initiatives aimed at improving the quality of life for all residents. The Barangay Officials shall pursue timely, effective and continuous improvement of quality services to its constituents.
-                </p>
-                <h2 class="font-bold text-black text-xl">VISSION</h2>
-                <P>Barangay 409 council shall provide excellent needed services and committed in ensuring the safety and wellness of its constituents</P>
-                <span class="text-white font-bold">Read more</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </div>
     </div>
     <!-- footer -->
@@ -463,10 +268,6 @@
             <p class="text-sm font-light whitespace-nowrap">Local Government System</p>
           </div>
         </div>
-        <!-- search form -->
-        <form class="m-auto sm:me-0" action="">
-          <input class="py-1 px-3 rounded text-black" type="text" placeholder="Search">
-        </form>
       </div>
       <div class="h-px w-full bg-white"></div>
       <div class="flex flex-col lg:flex-row gap-2">
@@ -579,6 +380,10 @@
         navbar.classList.remove('scrolled'); // Remove the class when at the top
       }
     });
+    function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.close();
+  }
   </script>
   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 </body>
