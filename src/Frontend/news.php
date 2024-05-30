@@ -51,11 +51,13 @@ ob_start();
             </div>
           </li>
           <div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-2 mt-2 md:mt-0">
-            <button class="text-primary bg-white hover:bg-btnDark hover:text-white bg-opacity-90 hover: focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2">
+            <button class="text-primary bg-white hover:bg-btnDark hover:text-white bg-opacity-90 hover: focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2"><a href="Login.php">
               Login
+              </a>
             </button>
-            <button class="text-white hover:text-white border border-white hover:bg-btnDark hover:border-btnDark focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center">
+            <button class="text-white hover:text-white border border-white hover:bg-btnDark hover:border-btnDark focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center"><a href="signup.php">
               Sign up
+              </a>
             </button>
           </div>
         </ul>
