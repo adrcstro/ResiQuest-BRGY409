@@ -1,0 +1,22 @@
+<?php
+include __DIR__ . '/../Connection.php';
+
+if (isset($_POST['revert'])) {
+    $id = $_POST['id'];
+
+    // Move the record back to the original table
+    $moveBackQuery = "INSERT INTO usersSELECT * FROM archive_my_table WHERE ID = ?";
+    $stmt = $conn->prepare($moveBackQuery);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    // Delete the record from the archive table
+    $deleteFromArchiveQuery = "DELETE FROM archive_my_table WHERE ID = ?";
+    $stmt = $conn->prepare($deleteFromArchiveQuery);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    echo "Record reverted to original table and deleted from archive.";
+    header("Location: archive_table_display.php"); // Redirect back to the display page
+}
+?>
