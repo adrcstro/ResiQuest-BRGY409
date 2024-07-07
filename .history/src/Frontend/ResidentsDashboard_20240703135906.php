@@ -689,10 +689,11 @@ if (!empty($_SESSION["ID"])) {
 </div>
       </div>
 
+</div>
 
-   
+     
 
-      <footer class="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">
+<footer class="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">
           <ul class="flex items-center flex-wrap mb-6 md:mb-0">
     <li class="flex items-center mr-4 md:mr-6">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -745,11 +746,7 @@ if (!empty($_SESSION["ID"])) {
 </dialog>
 
 
-          </footer>
-
-</div>
-
-   
+          </footer> 
 
 
 

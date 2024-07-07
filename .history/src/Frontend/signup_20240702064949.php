@@ -137,7 +137,7 @@ if (isset($_POST["submit"])) {
                     <div class="bg-white p-4 rounded-lg shadow-2xl flex flex-col items-center">
     <img src="/Images/fillup.svg" alt="Illustration" class="w-32 h-auto">
     <h2 class="text-lg font-semibold text-gray-600">Account Setup</h2>
-    <p class="text-sm text-gray-600">Setup Account by signing up basic Information</p>
+    <p class="text-sm text-gray-600">Setup account by signing up basic Information</p>
 </div>
 
                     <!-- Illustration 2 -->
@@ -328,7 +328,7 @@ if (isset($_POST["submit"])) {
           
             <div class="flex justify-between w-full py-4">
                 <div class="mr-19">
-                  <input type="checkbox" name="Agreedtermsandcondition" id="ch" class="mr-2" required />
+                  <input type="checkbox" name="Agreedtermsandcondition" id="ch" class="mr-2" />
                   <span class="text-md">I agree with the</span>
                   <a onclick="document.getElementById('privacyPolicyModal').classList.remove('hidden')"class="text-md text-blue-600  tracking-tighter cursor-pointer">Terms and Conditions</a>
                 </div>

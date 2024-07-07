@@ -665,15 +665,15 @@ ob_start();
         <div class="grid sm:grid-cols-3 gap-10 my-10 lg:my-0 items-center text-center sm:text-start">
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Gov Links</h1>
-            <a class="font-light hover:text-gray-400" href="https://manila.gov.ph/">Manila Gov</a>
-            <a class="font-light hover:text-gray-400" href="https://www.gov.ph/">Government Portal</a>
-            <a class="font-light hover:text-gray-400" href="https://manila.gov.ph/">Lungsod ng Maynila</a>
+            <a class="font-light hover:text-gray-400" href="#">Manila Gov</a>
+            <a class="font-light hover:text-gray-400" href="#">Government Portal</a>
+            <a class="font-light hover:text-gray-400" href="#">Lungsod ng Maynila</a>
           </div>
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Quick Links</h1>
-            <a class="font-light hover:text-gray-400" href="#services">Services</a>
-            <a class="font-light hover:text-gray-400" href="#news">Announcements</a>
-            <a class="font-light hover:text-gray-400" href="#about">About Barangay-409</a>
+            <a class="font-light hover:text-gray-400" href="#">Services</a>
+            <a class="font-light hover:text-gray-400" href="#">Announcements</a>
+            <a class="font-light hover:text-gray-400" href="#">About Barangay-409</a>
           </div>
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Contact Us</h1>

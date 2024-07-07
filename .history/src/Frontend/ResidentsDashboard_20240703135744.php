@@ -618,6 +618,60 @@ if (!empty($_SESSION["ID"])) {
     </div>
 
     
+    <footer class="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">
+          <ul class="flex items-center flex-wrap mb-6 md:mb-0">
+    <li class="flex items-center mr-4 md:mr-6">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+</svg>
+      <a href="#" onclick="privacyPolicyModal.showModal()"  class="text-sm font-normal text-gray-500 hover:underline">Terms Conditions & Privacy Policy</a>
+    </li>
+   
+    <li class="flex items-center mr-4 md:mr-6">
+    <svg class="w-5 h-5 text-gray-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                   </svg>
+      <a href="https://www.facebook.com/Barangay409" class="text-sm font-normal text-gray-500 hover:underline" target="_blank">Facebook Page</a>
+    </li>
+  </ul>
+
+  <dialog id="privacyPolicyModal" class="modal">
+<div class="modal-box w-100 h-full max-w-6xl rounded-lg">
+  <form method="dialog">
+    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+  </form>
+           <h2 class="text-2xl font-bold mb-4">Terms Conditions & Privacy Policy</h2>
+              <p class="mb-4">This Privacy Policy describes how we collect, use, and disclose information that we obtain through our website and services.</p>
+              <h3 class="text-lg font-semibold mb-2">Information We Collect</h3>
+              <p>We may collect the following types of information:</p>
+              <ul class="list-disc ml-6 mb-4">
+                <li>Personal Information: We may collect your name, email address, and other personal information when you provide it to us.</li>
+                <li>Usage Information: We may collect information about your usage of our website and services, such as the pages you visit and your interactions with our content.</li>
+              </ul>
+              <h3 class="text-lg font-semibold mb-2">How We Use Your Information</h3>
+              <p>We may use your information for various purposes, including:</p>
+              <ul class="list-disc ml-6 mb-4">
+                <li>Providing our services to you</li>
+                <li>Sending you updates and information about our products and services</li>
+                <li>Improving our website and services</li>
+              </ul>
+              <h3 class="text-lg font-semibold mb-2">Disclosure of Your Information</h3>
+              <p>We may disclose your information to third parties in certain circumstances, including:</p>
+              <ul class="list-disc ml-6 mb-4">
+                <li>With your consent</li>
+                <li>When required by law</li>
+                <li>With service providers and partners who assist us in delivering our services</li>
+              </ul>
+              <h3 class="text-lg font-semibold mb-2">Security</h3>
+              <p>We take reasonable measures to protect your information, but no method of transmission over the internet is 100% secure. We cannot guarantee the security of your information.</p>
+              <h3 class="text-lg font-semibold mb-2">Changes to this Privacy Policy</h3>
+              <p>We may update this Privacy Policy from time to time. Any changes will be posted on our website. By continuing to use our services, you agree to the updated Privacy Policy.</p>
+           
+           
+</dialog>
+
+
+          </footer>
 
     <div class="mb-2 mt-3 lg:mb-0">
             <h3 class="text-2xl font-bold text-black text-center">Residents Verification Process</h3>
@@ -689,69 +743,9 @@ if (!empty($_SESSION["ID"])) {
 </div>
       </div>
 
-
-   
-
-      <footer class="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">
-          <ul class="flex items-center flex-wrap mb-6 md:mb-0">
-    <li class="flex items-center mr-4 md:mr-6">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
-</svg>
-      <a href="#" onclick="privacyPolicyModal.showModal()"  class="text-sm font-normal text-gray-500 hover:underline">Terms Conditions & Privacy Policy</a>
-    </li>
-   
-    <li class="flex items-center mr-4 md:mr-6">
-    <svg class="w-5 h-5 text-gray-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-                   </svg>
-      <a href="https://www.facebook.com/Barangay409" class="text-sm font-normal text-gray-500 hover:underline" target="_blank">Facebook Page</a>
-    </li>
-  </ul>
-
-  <dialog id="privacyPolicyModal" class="modal">
-<div class="modal-box w-100 h-full max-w-6xl rounded-lg">
-  <form method="dialog">
-    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-  </form>
-           <h2 class="text-2xl font-bold mb-4">Terms Conditions & Privacy Policy</h2>
-              <p class="mb-4">This Privacy Policy describes how we collect, use, and disclose information that we obtain through our website and services.</p>
-              <h3 class="text-lg font-semibold mb-2">Information We Collect</h3>
-              <p>We may collect the following types of information:</p>
-              <ul class="list-disc ml-6 mb-4">
-                <li>Personal Information: We may collect your name, email address, and other personal information when you provide it to us.</li>
-                <li>Usage Information: We may collect information about your usage of our website and services, such as the pages you visit and your interactions with our content.</li>
-              </ul>
-              <h3 class="text-lg font-semibold mb-2">How We Use Your Information</h3>
-              <p>We may use your information for various purposes, including:</p>
-              <ul class="list-disc ml-6 mb-4">
-                <li>Providing our services to you</li>
-                <li>Sending you updates and information about our products and services</li>
-                <li>Improving our website and services</li>
-              </ul>
-              <h3 class="text-lg font-semibold mb-2">Disclosure of Your Information</h3>
-              <p>We may disclose your information to third parties in certain circumstances, including:</p>
-              <ul class="list-disc ml-6 mb-4">
-                <li>With your consent</li>
-                <li>When required by law</li>
-                <li>With service providers and partners who assist us in delivering our services</li>
-              </ul>
-              <h3 class="text-lg font-semibold mb-2">Security</h3>
-              <p>We take reasonable measures to protect your information, but no method of transmission over the internet is 100% secure. We cannot guarantee the security of your information.</p>
-              <h3 class="text-lg font-semibold mb-2">Changes to this Privacy Policy</h3>
-              <p>We may update this Privacy Policy from time to time. Any changes will be posted on our website. By continuing to use our services, you agree to the updated Privacy Policy.</p>
-           
-           
-</dialog>
-
-
-          </footer>
-
 </div>
 
-   
-
-
+      
 
 
 <dialog id="EditResidentprofile" class="modal p-3">
