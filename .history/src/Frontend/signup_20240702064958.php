@@ -328,7 +328,7 @@ if (isset($_POST["submit"])) {
           
             <div class="flex justify-between w-full py-4">
                 <div class="mr-19">
-                  <input type="checkbox" name="Agreedtermsandcondition" id="ch" class="mr-2" required />
+                  <input type="checkbox" name="Agreedtermsandcondition" id="ch" class="mr-2" />
                   <span class="text-md">I agree with the</span>
                   <a onclick="document.getElementById('privacyPolicyModal').classList.remove('hidden')"class="text-md text-blue-600  tracking-tighter cursor-pointer">Terms and Conditions</a>
                 </div>

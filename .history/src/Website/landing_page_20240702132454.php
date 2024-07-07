@@ -144,20 +144,25 @@ ob_start();
       <div id="home" class="relative mx-16 lg:mx-20">
         <!-- text-->
         <div class="flex pt-52 justify-center">
-          <div class="text-center">
-            <h2 class="text-white text-xl lg:text-2xl xl:text-3xl font-extralight tracking-widest pt-5">Welcome to Barangay-409</h2>
-            <h1 class="text-white text-6xl lg:text-5xl xl:text-6xl font-bold pt-3 pb-5">Document Request and Blotter Report Management System</h1>
-            <div class="flex justify-center mt-8">
-            <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-12 py-2.5 text-center me-2 mb-2 flex items-center">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
-  </svg>
-  <a href="../Frontend/signup.php">Get Started</a> 
-</button>
+  <div class="text-center px-4 md:px-8">
+    <h2 class="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extralight tracking-widest pt-5">
+      Welcome to Barangay-409
+    </h2>
+    <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold pt-3 pb-5">
+      Document Request and Blotter Report Management System
+    </h1>
+    <div class="flex justify-center mt-8">
+      <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-12 py-2.5 text-center me-2 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
+        </svg>
+        <a href="../Frontend/signup.php">Get Started</a>
+      </button>
+    </div>
+  </div>
+</div>
 
-          </div>
-          </div>
-        </div>
+
         <!-- card row -->
           <div class="grid grid-cols-1 lg:grid-cols-3 lg:flex items-start text-center py-auto mt-40 md:mx-20 gap-4 rounded-lg">
             <!-- card container -->
@@ -544,103 +549,104 @@ ob_start();
 </section>
 
 
-<section id="faq" class="lg:mt-32 bg-white z-50">
-  <span class="pl-3 border-l-8 mx-10 md:mx-40 border-primary flex flex-col">
-    <h1 class="text-black text-5xl font-semibold mb-2">
-      Barangay <b>FAQ's</b>
-    </h1>
-    <h1>
-      Frequently Asked Questions
-    </h1>
-  </span>
-  <!-- content -->
-  <div class="grid grid-cols-1 gap-6 mt-16 px-10 md:px-20 lg:px-20"> <!-- Adjusted here -->
+
+  <section id="faq" class="pt-10 lg:mt-32 bg-white z-50" id="FAQ">
+    <span class="pl-3 border-l-8 mx-10 md:mx-40 border-primary flex flex-col">
+      <h1 class= "text-black text-5xl font-semibold mb-2">
+        Barangay <b>FAQ's</b>
+      </h1>
+      <h1>
+        Frequently Asked Questions
+      </h1>
+    </span>
+    <!-- content -->
+    <div class="grid grid-cols-1 gap-6 mt-16 px-24 md:mx-20">
     <!-- accordion 1 -->
-    <div class="relative mb-3 shadow-md w-full">
-      <h6 class="mb-0">
-        <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-1">
-          <span>What services does the Barangay Document Request provide?</span>
-          <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-        </button>
-      </h6>
-      <div data-collapse="animated-collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-        <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-          The Barangay provides various services including issuance of barangay clearances, barangay i.d, barangay indigency, business permit, letter for barangay hearing, and many more.
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-1">
+            <span>What services does the Barangay Document Request provide?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out ">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            The Barangay provides various services including issuance of barangay clearances, barangay i.d, barangay indigency, business permit, letter for barangay hearing, and many more.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 2 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-2">
+            <span>How can I report community issues or concerns?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out ">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            You can report community issues or concerns by contacting the Barangay office directly, attending Barangay assemblies, or using online platforms provided by the Barangay for feedback and inquiries.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 3 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-3">
+            <span>What are the requirements for obtaining a barangay clearance?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            The requirements for obtaining a barangay clearance may vary depending on the Barangay's regulations but commonly include valid identification documents, proof of residency, and payment of necessary fees.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 4 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-4">
+            <span>How can I participate in Barangay activities and events?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            You can participate in Barangay activities and events by attending community gatherings, volunteering for programs and projects, joining Barangay-sponsored initiatives, or contacting the Barangay officials for more information.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 5 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-5">
+            <span>How can I report a crime or emergency situation?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-5" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            To report a crime or emergency situation, you can contact the local police authorities, Barangay officials, or emergency hotlines provided by the government. It's important to provide accurate information and cooperate with authorities for prompt assistance.
+          </div>
+        </div>
+      </div>
+      <!-- accordion 6 -->
+      <div class="relative mb-3 shadow-md">
+        <h6 class="mb-0">
+          <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-6">
+            <span>How can I get the Document I Requested?</span>
+            <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-6" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
+            The document you've requeted will be placed and process in our barangay hall, so you can pick it up there when it's indicate that it is ready to be pick-up.
+          </div>
         </div>
       </div>
     </div>
-    <!-- accordion 2 -->
-    <div class="relative mb-3 shadow-md w-full">
-      <h6 class="mb-0">
-        <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-2">
-          <span>How can I report community issues or concerns?</span>
-          <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-        </button>
-      </h6>
-      <div data-collapse="animated-collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-        <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-          You can report community issues or concerns by contacting the Barangay office directly, attending Barangay assemblies, or using online platforms provided by the Barangay for feedback and inquiries.
-        </div>
-      </div>
-    </div>
-    <!-- accordion 3 -->
-    <div class="relative mb-3 shadow-md w-full">
-      <h6 class="mb-0">
-        <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-3">
-          <span>What are the requirements for obtaining a barangay clearance?</span>
-          <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-        </button>
-      </h6>
-      <div data-collapse="animated-collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-        <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-          The requirements for obtaining a barangay clearance may vary depending on the Barangay's regulations but commonly include valid identification documents, proof of residency, and payment of necessary fees.
-        </div>
-      </div>
-    </div>
-    <!-- accordion 4 -->
-    <div class="relative mb-3 shadow-md w-full">
-      <h6 class="mb-0">
-        <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-4">
-          <span>How can I participate in Barangay activities and events?</span>
-          <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-        </button>
-      </h6>
-      <div data-collapse="animated-collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-        <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-          You can participate in Barangay activities and events by attending community gatherings, volunteering for programs and projects, joining Barangay-sponsored initiatives, or contacting the Barangay officials for more information.
-        </div>
-      </div>
-    </div>
-    <!-- accordion 5 -->
-    <div class="relative mb-3 shadow-md w-full">
-      <h6 class="mb-0">
-        <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-5">
-          <span>How can I report a crime or emergency situation?</span>
-          <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-        </button>
-      </h6>
-      <div data-collapse="animated-collapse-5" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-        <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-          To report a crime or emergency situation, you can contact the local police authorities, Barangay officials, or emergency hotlines provided by the government. It's important to provide accurate information and cooperate with authorities for prompt assistance.
-        </div>
-      </div>
-    </div>
-    <!-- accordion 6 -->
-    <div class="relative mb-3 shadow-md w-full">
-      <h6 class="mb-0">
-        <button class="relative flex items-center text-xl w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500" data-collapse-target="animated-collapse-6">
-          <span>How can I get the Document I Requested?</span>
-          <i class="absolute right-5 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
-        </button>
-      </h6>
-      <div data-collapse="animated-collapse-6" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-        <div class="p-4 text-sm leading-semibold text-blue-gray-500/80">
-          The document you've requested will be processed and available for pick-up at our Barangay hall when it is ready.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -665,19 +671,19 @@ ob_start();
         <div class="grid sm:grid-cols-3 gap-10 my-10 lg:my-0 items-center text-center sm:text-start">
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Gov Links</h1>
-            <a class="font-light hover:text-gray-400" href="https://manila.gov.ph/">Manila Gov</a>
-            <a class="font-light hover:text-gray-400" href="https://www.gov.ph/">Government Portal</a>
-            <a class="font-light hover:text-gray-400" href="https://manila.gov.ph/">Lungsod ng Maynila</a>
+            <a class="font-light hover:text-gray-400" href="#">Manila Gov</a>
+            <a class="font-light hover:text-gray-400" href="#">Government Portal</a>
+            <a class="font-light hover:text-gray-400" href="#">Lungsod ng Maynila</a>
           </div>
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Quick Links</h1>
-            <a class="font-light hover:text-gray-400" href="#services">Services</a>
-            <a class="font-light hover:text-gray-400" href="#news">Announcements</a>
-            <a class="font-light hover:text-gray-400" href="#about">About Barangay-409</a>
+            <a class="font-light hover:text-gray-400" href="#">Services</a>
+            <a class="font-light hover:text-gray-400" href="#">Announcements</a>
+            <a class="font-light hover:text-gray-400" href="#">About Barangay-409</a>
           </div>
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Contact Us</h1>
-            <p class="font-light">733-1499</p>
+            <p class="font-light">0912-0210-2100</p>
             <p class="font-light">Barangay-409, Phillipines</p>
             <p class="font-light">Barangay-409@gmail.com</p>
           </div>

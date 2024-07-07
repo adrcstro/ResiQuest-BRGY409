@@ -544,7 +544,7 @@ ob_start();
 </section>
 
 
-<section id="faq" class="lg:mt-32 bg-white z-50">
+<section id="faq" class="pt-10 lg:mt-32 bg-white z-50">
   <span class="pl-3 border-l-8 mx-10 md:mx-40 border-primary flex flex-col">
     <h1 class="text-black text-5xl font-semibold mb-2">
       Barangay <b>FAQ's</b>
@@ -554,7 +554,7 @@ ob_start();
     </h1>
   </span>
   <!-- content -->
-  <div class="grid grid-cols-1 gap-6 mt-16 px-10 md:px-20 lg:px-20"> <!-- Adjusted here -->
+  <div class="grid grid-cols-1 gap-6 mt-16 px-10 md:px-30 lg:px-30"> <!-- Adjusted here -->
     <!-- accordion 1 -->
     <div class="relative mb-3 shadow-md w-full">
       <h6 class="mb-0">
@@ -665,19 +665,19 @@ ob_start();
         <div class="grid sm:grid-cols-3 gap-10 my-10 lg:my-0 items-center text-center sm:text-start">
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Gov Links</h1>
-            <a class="font-light hover:text-gray-400" href="https://manila.gov.ph/">Manila Gov</a>
-            <a class="font-light hover:text-gray-400" href="https://www.gov.ph/">Government Portal</a>
-            <a class="font-light hover:text-gray-400" href="https://manila.gov.ph/">Lungsod ng Maynila</a>
+            <a class="font-light hover:text-gray-400" href="#">Manila Gov</a>
+            <a class="font-light hover:text-gray-400" href="#">Government Portal</a>
+            <a class="font-light hover:text-gray-400" href="#">Lungsod ng Maynila</a>
           </div>
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Quick Links</h1>
-            <a class="font-light hover:text-gray-400" href="#services">Services</a>
-            <a class="font-light hover:text-gray-400" href="#news">Announcements</a>
-            <a class="font-light hover:text-gray-400" href="#about">About Barangay-409</a>
+            <a class="font-light hover:text-gray-400" href="#">Services</a>
+            <a class="font-light hover:text-gray-400" href="#">Announcements</a>
+            <a class="font-light hover:text-gray-400" href="#">About Barangay-409</a>
           </div>
           <div class="flex flex-col flex-grow mx-auto gap-2">
             <h1 class="text-xl font-semibold underline">Contact Us</h1>
-            <p class="font-light">733-1499</p>
+            <p class="font-light">0912-0210-2100</p>
             <p class="font-light">Barangay-409, Phillipines</p>
             <p class="font-light">Barangay-409@gmail.com</p>
           </div>

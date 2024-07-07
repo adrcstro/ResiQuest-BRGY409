@@ -554,7 +554,7 @@ ob_start();
     </h1>
   </span>
   <!-- content -->
-  <div class="grid grid-cols-1 gap-6 mt-16 px-10 md:px-20 lg:px-20"> <!-- Adjusted here -->
+  <div class="grid grid-cols-1 gap-6 mt-16 px-10 md:px-10 lg:px-10"> <!-- Adjusted here -->
     <!-- accordion 1 -->
     <div class="relative mb-3 shadow-md w-full">
       <h6 class="mb-0">
