@@ -942,11 +942,11 @@ if(isset($_SESSION["AdminID"])) {
     </div>
     
 <div class="flex justify-end align-end"> 
-     <button onclick="Admin_printanalytics.showModal()" class="mt-3  relative text-white border-2 rounded-lg border-gray-200  bg-green-400 dark:bg-gray-800 dark:border-gray-700 hover:bg-green-500  font-semibold py-2 px-4">
+     <button id="buttonAdmin_printanalytics" class="mt-3  relative text-white border-2 rounded-lg border-gray-200  bg-green-400 dark:bg-gray-800 dark:border-gray-700 hover:bg-green-500  font-semibold py-2 px-4">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"class="w-5 h-5 inline-block align-middle text-white">
   <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
 </svg>
- View Monthly Request
+ View Monthly Service
 </button>
 </div>
 
@@ -1047,22 +1047,70 @@ if(isset($_SESSION["AdminID"])) {
     </div>
 </dialog>
 
-<script>
-document.getElementById('printanalytics').addEventListener('click', function() {
-    const radioValue = document.querySelector('input[name="bordered-radio"]:checked').value;
-    const selectedYear = document.getElementById('SelectYear').value;
-    const selectedMonth = document.getElementById('SelectMonth').value;
 
-    if (radioValue === 'DocumentReq') {
-        window.open(`../Backend/generate_montly_request_chart.php?year=${selectedYear}&month=${selectedMonth}`, '_blank');
-    } else if (radioValue === 'ComplaintRep') {
-        window.open(`../Backend/generate_monthly_report_chart.php?year=${selectedYear}&month=${selectedMonth}`, '_blank');
-    }
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("printrequest");
+  const modalContent = document.getElementById("printdocument");
+  const openModalButtons = document.querySelectorAll(".buttonAdmin_printanalytics");
+  const closeModalButton = document.getElementById("printclose");
+  const printdocsform = document.getElementById("printdocsform");
+
+  openModalButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const ID = button.getAttribute("data-request-id");
+      const servietype = button.getAttribute("data-request-servietype");
+      
+      // Update form action based on service type
+      switch (servietype) {
+        case "Certificate of Residency":
+          printdocsform.action = "../Backend/GenerateResidency.php";
+          break;
+        case "Business Clearance":
+          printdocsform.action = "../Backend/GenerateBusinessClerancen.php";
+          break;
+        case "Barangay Identification":
+          printdocsform.action = "../Backend/GenerateBrgyForm.php";
+          break;
+        case "Certificate of Indigency":
+          printdocsform.action = "../Backend/GenerateIndigency.php";
+          break;
+
+        default:
+          console.log("Invalid ServiceType");
+      }
+      
+      // Display default text in modal content
+      modalContent.innerHTML = `
+        <div class="flex flex-col items-center mt-3 mb-5">
+          <div class="mx-auto text-center" style="width: 200px;">
+            <img src="/Images/print.svg" alt="Illustration" class="w-30 h-auto">
+            <p class="text-lg font-semibold text-center ">Print Document</p>
+          </div>
+          <h1 class="text-sm mt-3  font-bold"><span class="font-semibold">Request-ID:</span> ${ID}</h1>
+          <h1 class="text-sm font-bold"><span class="font-semibold">Service-Type:</span> ${servietype}</h1>
+          <div class="hidden  items-center justify-center mt-3">
+            <input  value="${ID}"   type="text" name="RequestIDprint" id="RequestIDprint" autocomplete="given-name" placeholder=""
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ">
+          </div>
+          <div class="hidden  items-center justify-center mt-3">
+            <input  value="${servietype}"   type="text" name="ServiceType" id="ServiceType" autocomplete="given-name" placeholder=""
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ">
+          </div>
+        </div>
+      `;
+      
+      // Open the modal
+      modal.showModal();
+    });
+  });
+
+  // Close modal button
+  closeModalButton.addEventListener("click", function () {
+    modal.close();
+  });
 });
 </script>
-
-
-
 
 </div>
              </div>

@@ -946,123 +946,44 @@ if(isset($_SESSION["AdminID"])) {
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"class="w-5 h-5 inline-block align-middle text-white">
   <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
 </svg>
- View Monthly Request
+ Print Analytics
 </button>
 </div>
-
 <dialog id="Admin_printanalytics" class="modal p-3">
-    <div class="modal-box w-full max-w-6xl rounded-none">
+    <div class="modal-box w-full h-full max-w-6xl rounded-none">
         <div class="flex flex-col">
             <div class="overflow-x-auto rounded-lg">
-                <div class="mb-2 lg:mb-0 text-center">
-                    <h3 class="text-2xl font-bold text-blue-400">BRGY-409 Document Request Management System</h3>
-                    <span class="text-base font-medium text-blue-400">Print Document And Complaint Chart Data</span>
+                <div class="mb-2 lg:mb-0">
+                    <h3 class="text-2xl font-bold text-blue-400 text-center">BRGY-409 Document Request Management System</h3>
+                    <span class="flex text-base font-medium text-blue-400 justify-center text-center">Print Document And Complaint Chart Data</span>
                 </div>
                 <form method="dialog">
                     <button class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">✕</button>
                 </form>
-                <div class="flex flex-col items-center mt-4">
-                    <div class="w-full flex items-center justify-center mb-2">
-                        <img src="/Images/printcahrt.svg" alt="Illustration" class="w-1/2 h-auto md:w-1/4">
-                    </div>
-                    <div class="w-full flex flex-col items-center justify-center">
-                    <div class="bg-blue-100 p-3 rounded-md mt-2">
-<div class="flex items-center">
-  <h2 class="text-lg font-semibold mr-1">Note</h2>
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
-  </svg>
-</div>
-              <p>Viewing Monthly Request and Blotter Report Chart</p>
-              <ul class="list-disc ml-6 mb-4">
-                <li><span class="font-bold">Form Type: </span> Ensure you select either "Document Request" or "Complaint/Blotter Report".</li>
-                <li><span class="font-bold">Year and Month: </span> Select the appropriate year and month for your data.</li>
-                <li><span class="font-bold">Final Step: </span> Click on "Print Data Chart Table" to generate the document.</li>
-              </ul>
-            </div>
-            <form id="Analytics">  
-                        <div class="mt-3 flex flex-col sm:flex-col gap-y-6">
-                            <div class="flex flex-row items-center justify-center gap-x-6">
-                                <div class="flex items-center  border border-gray-200 rounded dark:border-gray-700 w-64 lg:w-72 p-4">
-                                    <input id="bordered-radio-1" type="radio" value="DocumentReq" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="bordered-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Document Request</label>
-                                </div>
-                                <div class="flex items-center border border-gray-200 rounded dark:border-gray-700 w-64 lg:w-72 p-4">
-                                    <input checked id="bordered-radio-2" type="radio" value="ComplaintRep" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="bordered-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complaint/Blotter Report</label>
-                                </div>
-                            </div>
-                            <div class="flex justify-center align-center flex-col sm:flex-row ">
-                                <div class="sm:flex-1">
-                                    <label for="SelectYear" class="block text-sm text-center font-semibold leading-6 text-gray-900">Select Year</label>
-                                    <select required id="SelectYear" name="SelectYear" autocomplete="family-name" placeholder="Select Year" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 lg:w-64 xl:w-72">
-                                    </select>
-                                    <script>
-                                        const selectYear = document.getElementById('SelectYear');
-                                        const startYear = 2024;
-                                        const endYear = new Date().getFullYear() + 50; // Example: current year + 50
+                <div class="flex justify-between mt-4">
+                    <form class="max-w-sm">
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Choose a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                    </form>
 
-                                        for (let year = startYear; year <= endYear; year++) {
-                                            const option = document.createElement('option');
-                                            option.value = year;
-                                            option.textContent = year;
-                                            selectYear.appendChild(option);
-                                        }
-                                    </script>
-                                </div>
-                                <div class="sm:flex-1">
-                                    <label for="SelectMonth" class="block text-sm text-center font-semibold leading-6 text-gray-900">Select Month</label>
-                                    <select required id="SelectMonth" name="SelectMonth" autocomplete="family-name" placeholder="Select Month" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 lg:w-64 xl:w-72">
-                                    </select>
 
-                                    <script>
-                                        const selectMonth = document.getElementById('SelectMonth');
-                                        const months = [
-                                            "January", "February", "March", "April", "May", "June",
-                                            "July", "August", "September", "October", "November", "December"
-                                        ];
-                                        months.forEach((month, index) => {
-                                            const option = document.createElement('option');
-                                            option.value = index + 1; // month number (1-12)
-                                            option.textContent = month;
-                                            selectMonth.appendChild(option);
-                                        });
-                                    </script>
-                                </div>
-                            </div>
-                        </div>
-                        </form>
-                    </div>
-                    <div class="mt-3 flex justify-center align-center"> 
-                        <button id="printanalytics" onclick="Admin_printanalytics.showModal()" class="mt-3 relative text-white border-2 rounded-lg border-gray-200 bg-green-400 dark:bg-gray-800 dark:border-gray-700 hover:bg-green-500 font-semibold py-2 px-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-5 h-5 inline-block align-middle text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
-                            </svg>
-                            Print Data Chart Table
-                        </button>
-                    </div>
+                    <div class="mx-auto text-center" style="width: 200px;">
+                    <img src="/Images/residencyt.svg" alt="Illustration" class="w-30 h-auto">
+            <p class="text-lg font-semibold text-center ">Print Document</p>
+          </div>
+
+                   
                 </div>
             </div>
         </div>
     </div>
 </dialog>
-
-<script>
-document.getElementById('printanalytics').addEventListener('click', function() {
-    const radioValue = document.querySelector('input[name="bordered-radio"]:checked').value;
-    const selectedYear = document.getElementById('SelectYear').value;
-    const selectedMonth = document.getElementById('SelectMonth').value;
-
-    if (radioValue === 'DocumentReq') {
-        window.open(`../Backend/generate_montly_request_chart.php?year=${selectedYear}&month=${selectedMonth}`, '_blank');
-    } else if (radioValue === 'ComplaintRep') {
-        window.open(`../Backend/generate_monthly_report_chart.php?year=${selectedYear}&month=${selectedMonth}`, '_blank');
-    }
-});
-</script>
-
-
-
 
 </div>
              </div>
